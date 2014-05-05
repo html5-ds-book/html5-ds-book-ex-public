@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Color picker</title>
+  </head>
+  <body>
+    <form>
+      <label>
+        Select your favorite color <input type="color" value="#0000ff"/>
+      </label>
+        <br />
+        <input type="submit"/>
+    </form>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+    <script type="text/javascript">
+      if(!Modernizr.inputtypes.color){
+        //do a differnt method of color picking
+        console.log("Browsers has no support for color going with fallback")
+       }
+    </script>
+  </body>
+</html>

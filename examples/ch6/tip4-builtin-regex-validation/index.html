@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Regex validation</title>
+  </head>
+  <body>
+    <form>
+     <div>
+      <label>
+       Username: <input type="text" title="only letters allowed" name="username" pattern="^[a-zA-Z]+$" />
+      </label>
+    </div>
+    <div>
+      <label>
+       Phone <input type="tel" name="phone" pattern="[\+]?[1-9]+" />
+      </label>
+    </div>
+    <div>
+      <label>
+       Webpage <input type="url" name="webpage" />
+      </label>
+    </div>
+    <div>
+      <label>
+        Emails <input type="email" name="emails" multiple required />
+      </label>
+    </div>
+   <div>
+      <label>
+       Gmail <input type="email" name="emails" pattern="[a-z]+@gmail.com" maxlength="14"/>
+      </label>
+    </div>
+    <input type="submit" />
+  </form>
+  </body>
+</html>

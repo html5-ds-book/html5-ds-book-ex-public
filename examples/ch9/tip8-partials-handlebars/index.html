@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Partials in Handlebars</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="list" class="conversation">
+</div>
+
+<script id="thread-template" type="text/handlebars">
+    <div class="message">
+        <img src="{{image}}">
+        <span class="name">{{from}}</span>
+        <span class="date">{{date}}</span>
+        <p class="text">{{text}}</p>
+    </div>
+    <div class="replies">
+        {{#each replies}}
+            {{> thread}}
+        {{/each}}
+    </div>
+</script>
+
+<script id="template" type="text/handlebars">
+<h2>{{topic}}</h2>
+{{> thread}}
+<p><input type="button" value="Reply"></p>
+</script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="handlebars.js"></script>
+<script type="text/javascript" src="example.js"></script>
+</body>
+</html>
+

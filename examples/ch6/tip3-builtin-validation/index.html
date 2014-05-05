@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Built In Validation</title>
+    <link rel="stylesheet" href="example.css">
+  </head>
+  <body>
+
+  <form>
+    <div>
+      <label>
+        Name <input required name="name" x-moz-errormessage="We need this.">
+      </label>
+    </div>
+    <div>
+      <label>
+        Nickname <input required name="nickname">
+      </label>
+    </div>
+    <div>
+      <label>
+        Start week <input type="week" name="week" min="2013-W02" max="2014-W02" required>
+      </label>
+    </div>
+    <div>
+      <label>
+        Best months <input value="2013-01" type="month" step="2" name="month">
+      </label>
+    </div>
+    <button type="submit">Save</button>
+    <button type="submit" formnovalidate>Save but don't validate</button>
+    <button type="button">Check Validity</button>
+  </form>
+    <div id="validLog"></div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="example.js"></script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+ <head>
+    <meta charset="utf-8">
+    <title>Displaying math formulas</title>
+ </head>
+  <body>
+    <!--
+    <script type="text/javascript"
+      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+     -->
+    <script type="text/javascript"
+      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML-full">
+    </script>
+    <p> MathML source example </p>
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+       <mrow>
+           <mi>π</mi>
+         <mo>=</mo>
+         <mfrac>
+            <mstyle scriptlevel="0">
+              <mn>3</mn>
+            </mstyle>
+            <mstyle scriptlevel="0">
+               <mrow>
+                 <mn>7</mn>
+                 <mo>+</mo>
+                 <mfrac numalign="left">
+                   <mstyle scriptlevel="0">
+                     <msup><mn>1</mn></msup>
+                   </mstyle>
+                 </mfrac>
+               </mrow>
+            </mstyle>
+         </mfrac>
+      </mrow>
+    </math>
+    <p> ASCII Math source example </p>
+    <p>
+        `π = 3+1/(7+1/(15+1/(1+1/...)))`
+    </p>
+  </body>
+</html>

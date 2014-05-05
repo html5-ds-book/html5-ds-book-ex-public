@@ -1,0 +1,32 @@
+WEBVTT
+
+1
+00:00:01.000 --> 00:00:13.000
+this is the video introduction
+
+2
+00:00:15.000 --> 00:00:40.000
+There is also some awesome info in
+multiple lines.
+Why you ask?
+Why not ...
+
+3
+00:00:42.000 --> 00:01:40.000
+We can use <b>HTML</b> as well
+<i> Why not?</i>
+
+4
+00:01:42.000 --> 00:02:40.000
+{
+"name": "Some JSON data",
+"other": "it should be good for metadata"
+}
+
+5
+00:02:41.000 --> 00:03:40.000 vertical:lr
+text can be vertical
+
+6
+00:03:42.000 --> 00:04:40.000 align:start size:50%
+text can have different size relative to frame

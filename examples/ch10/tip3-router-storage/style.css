@@ -1,0 +1,21 @@
+* { box-sizing: border-box; }
+#main {
+    padding: 0em 1em; }
+.edit .left {
+    float:left;
+    width: 50%;
+    padding-right: 1em; }
+.edit .right {
+    float: right;
+    width: 50%;
+    padding-left: 1em; }
+.edit textarea {
+    width: 100%; 
+    min-height: 24em;}
+.edit input {
+    width: 70%; }
+.edit {
+    float:left;
+    width: 100%;
+    clear:both; }
+

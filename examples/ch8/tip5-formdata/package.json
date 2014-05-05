@@ -1,0 +1,8 @@
+{
+  "name" : "ch8-tip5-formdata",
+  "description" : "example on http get",
+  "dependencies" : ["restify"],
+  "author" : "Mite Mitreski",
+  "main" : "html5dasc",
+  "version" : "0.0.1"
+}

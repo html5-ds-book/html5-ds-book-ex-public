@@ -1,0 +1,43 @@
+<!doctype html>
+<html ng-app="todo">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.min.js"></script>
+    <script src="example.js"></script>
+    <script src="service.js"></script>
+    <meta charset="utf8">
+    <style type="text/css">
+        .todo-text { 
+            display: inline-block; 
+            width: 340px; 
+            vertical-align:top;
+        }
+    </style>
+  </head>
+  <body>
+    <div ng-controller="TodoController">
+        <select ng-model="archive">
+            <option value="0">Current</option>
+            <option value="1">Archived</option>
+        </select>
+        From: <input type="date" ng-model="from">
+        To: <input type="date" ng-model="to">
+        <ul>
+            <li ng-repeat="todo in todos | filter:{archived:archive}">
+                <input type="checkbox" ng-model="todo.done" 
+                    ng-disabled="todo.archived" 
+                    ng-click="updateItem(todo)"> 
+                <span class="todo-text">{{todo.text}}</span>
+                <span class="todo-age">{{todo.date | age}}</span>
+            </li>
+        </ul>
+        <form ng-submit="addItem()">
+            <input ng-model="text">
+            <input type="submit" value="Add">
+        </form>
+        <input type="button" ng-click="archiveDone()" 
+            value="Archive done">
+        <div ng-show="svc.error">{{svc.error}}</div>
+    </div>    
+  </body>
+</html>
+

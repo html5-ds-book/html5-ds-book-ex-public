@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>BMI Units</title>
+    </head>
+    <body>
+        <label>Unit system</label>
+        <select id="unit">
+            <option selected value="height=m,cm 0;weight=kg 1;distance=km 1">Metric</option>
+            <option value="height=ft,inch 0;weight=lbs 0;distance=mi 1">Imperial</option>
+        </select><br>
+
+        <label>Height</label>
+        <span data-measurement="height" id="height">
+            <input data-value-display type="text" id="height" class="calc"> 
+            <span data-unit-display></span>
+            <input data-value-display type="text" id="height" class="calc"> 
+            <span data-unit-display></span>
+        </span>
+        <br>
+        <label>Ideal Weight</label>
+        <span data-measurement="weight" id="weight"> 
+            <span data-value-display type="text">0</span>
+            <span data-unit-display></span>
+        </span> <br>
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script type="text/javascript" src="unitval.js"></script>
+        <script type="text/javascript" src="example.js"></script>
+        </script>
+    </body>
+</html>

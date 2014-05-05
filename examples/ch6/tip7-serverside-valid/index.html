@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Async validation</title>
+<style type="text/css">
+p[data-validation-error] {
+    display:none;
+    color:red;
+}
+</style>
+</head>
+<body>
+<form>
+    <p>Username:</p>
+    <p><input name="user" id="user" value="" /></p>
+    <p data-validation-error="user"></p>
+</form>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="example.js"></script>
+</body>
+</html>
+

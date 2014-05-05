@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Partials in EJS</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="list" class="conversation">
+</div>
+
+<script id="thread-template" type="text/ejs">
+    <div class="message">
+        <img src="<%= thread.image %>">
+        <span class="name"><%= thread.from %></span>
+        <span class="date"><%= thread.date %></span>
+        <p class="text"><%= thread.text %></p>
+    </div>
+    <div class="replies">
+        <% thread.replies && thread.replies.forEach(function(reply) { %>
+            <%= partial.render({thread:reply, partial:partial}) %>
+        <% }); %>
+    </div>
+</script>
+
+<script id="template" type="text/ejs">
+<h2><%= thread.topic %></h2>
+<%= partial.render({thread: thread, partial: partial}) %>
+<p><input type="button" value="Reply"></p>
+</script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="ejs_production.js"></script>
+<script type="text/javascript" src="example.js"></script>
+</body>
+</html>
+

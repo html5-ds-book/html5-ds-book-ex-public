@@ -1,0 +1,12 @@
+#legendl{
+  float: left;
+}
+
+#chart{
+  float: right;
+}
+
+#slider{
+  margin-top: 20px;
+  float: right;
+}

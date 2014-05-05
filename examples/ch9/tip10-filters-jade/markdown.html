@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Render markdown</title>
+        <style type="text/css">
+            #markdown, #render { width: 48%; min-height:320px; }
+            #markdown { float: left; }
+            #render { float: right; }
+        </style>
+    </head>
+    <body>
+        <textarea id="markdown">
+# Markdown example.
+This is an example of markdown text. We can link to [Google](http://www.google.com) 
+or insert google's logo:
+![Google Logo](https://www.google.com/images/srpr/logo3w.png)
+
+## Text formatting
+We can use *emphasis* or **strong** text,
+> insert a quote
+etc.</textarea>
+        <div id="render"></div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script src="https://raw.github.com/spion/markdown-js/master/lib/markdown.js"></script>
+        <script type="text/javascript">
+            function rendermd(val) { $("#render").html(markdown.toHTML($("#markdown").val())); }
+            $("#markdown").on('keyup', rendermd); $(rendermd);
+        </script>
+    </body>
+</html>
+

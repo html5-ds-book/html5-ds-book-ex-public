@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Range selection</title>
+    <style type="text/css">
+        #vertical {
+          -webkit-appearance: slider-vertical;
+          height: 80px;
+          width: 30px;
+        };
+    </style>
+  </head>
+  <body>
+    <form>
+      <label>
+        Select the range <input name="simpleRange" type="range" />
+      </label>
+      <br/>
+      <label>
+        Select within range <input id="vertical" name="simpleRangeLimited" min="20" max="100" type="range" />
+      </label>
+      <br/>
+      <label>
+        Custom step <input id="full" name="simpleRangeSteped" type="range" value="35" min="0" max="220" step="5" />
+      </label>
+        <span id="out"> </span>
+      <br/>
+      <label>
+        Temperature scale
+        <input min="0" max="70" type="range" name="themp" list="theList">
+      </label>
+        <datalist id="theList">
+          <option value="-30" />
+          <option value="10" label="Low" />
+          <option value="20" label="Normal" />
+          <option value="45" label="High" />
+          <option value="some invalid Value" />
+        </datalist>
+        <br/>
+        <input type="submit" />
+    </form>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        (function($){
+          var val = $('#full').val();
+          var out  = $('#out');
+
+          out.html(val);
+
+          $('#full').change(function(){
+              out.html(this.value);
+          });
+
+        }($));
+
+    </script>
+  </body>
+</html>

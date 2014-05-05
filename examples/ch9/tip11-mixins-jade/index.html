@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Mixins in Jade</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="list" class="conversation">
+</div>
+
+<script id="thread-template" type="text/jade">
+</script>
+
+<script id="template" type="text/handlebars">
+
+mixin thread(thread)
+  .message
+    img(src=thread.image)
+    span.name=thread.from
+    span.date=thread.date
+    p.text=thread.text
+  .replies
+    if thread.replies
+      each reply in thread.replies
+        +thread(reply)
+
+h2=thread.topic
++thread(thread)
+p
+  input(type="button",value="Reply")
+
+</script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="jade.min.js"></script>
+<script type="text/javascript" src="example.js"></script>
+</body>
+</html>
+

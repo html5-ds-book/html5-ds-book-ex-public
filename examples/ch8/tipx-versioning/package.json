@@ -1,0 +1,8 @@
+{
+  "name" : "ch8-tipx-versioning",
+  "description" : "semantic versioning",
+  "dependencies" : ["restify"],
+  "author" : "Mite Mitreski",
+  "main" : "html5dasc",
+  "version" : "0.0.1"
+}

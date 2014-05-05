@@ -1,0 +1,61 @@
+<!doctype html>
+ <html lang="en">
+ <head>
+    <meta charset="utf-8">
+    <title>Single select list</title>
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/chosen/0.9.11/chosen.css">
+    <style type="text/css">
+       .drop-down{
+        width: 250px;
+      }
+    </style>
+ </head>
+ <body>
+   <form>
+    <div>
+      <label>
+        Favourite programming language :
+        <select id="programming" data-placeholder="Your favorite programming language" class="drop-down">
+          <option value=""></option>
+          <option>Java</option>
+          <option>Python</option>
+          <option>Clojure</option>
+          <option>C</option>
+          <option selected>Java Script </option>
+          <option>Lisp</option>
+          <option>Pascal</option>
+          <option>VB</option>
+        </select>
+    </label>
+    </div>
+    <div>
+     <label>
+       You consider your self to be a :
+        <select id="occupation" data-placeholder="Occupation" class="drop-down">
+          <optgroup label="Software">
+              <option>Java developer</option>
+              <option>Node developer</option>
+              <option>Software Achitect</option>
+              <option selected>Engineer</option>
+              <option>Manager</option>
+          <optgroup>
+          <optgroup label="Hardware">
+            <option>Semiconductor</option>
+            <option>Manager</option>
+            <option>Computer Hardware Engineer</option>
+          </optgroup>
+        </select>
+      </label>
+    </div>
+    <input type="submit" />
+    </form>
+   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+   <script src="//cdnjs.cloudflare.com/ajax/libs/chosen/0.9.11/chosen.jquery.min.js"></script>
+   <script type="text/javascript">
+     $(function() {
+        $("#programming").chosen({allow_single_deselect:true});
+        $("#occupation").chosen();
+     });
+   </script>
+ </body>
+</html>

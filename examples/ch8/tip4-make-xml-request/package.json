@@ -1,0 +1,8 @@
+{
+  "name" : "ch8-tip8-xml-data",
+  "description" : "http get on xml data",
+  "dependencies" : ["restify", "xmlbuilder"],
+  "author" : "Mite Mitreski",
+  "main" : "html5dasc",
+  "version" : "0.0.1"
+}

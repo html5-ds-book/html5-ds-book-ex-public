@@ -1,0 +1,21 @@
+<head>
+  <title>This is secure?</title>
+</head>
+
+<body>
+  <div id="login">
+    {{loginButtons align="right"}}
+  </div>
+  {{> list}}
+</body>
+
+<template name="list">
+  <h1>This is my awesome list</h1>
+  <input placeholder="enter awesomeness"> </input>
+  <button>Add</button>
+  <ul>
+    {{#each items}}
+      <li>{{text}} </li>
+    {{/each}}
+  </ul>
+</template>

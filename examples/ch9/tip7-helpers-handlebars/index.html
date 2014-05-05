@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Helpers in Handlebars</title>
+<style type="text/css">
+li { padding:1em; }
+li img { vertical-align:middle; }
+</style>
+</head>
+<body>
+<div id="list">
+</div>
+<script id="template" type="text/handlebars">
+
+{{#ul list}} 
+    {{img image alt=name}} {{name}}
+{{/ul}}
+
+</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="handlebars.js"></script>
+<script type="text/javascript" src="example.js"></script>
+</body>
+</html>
+

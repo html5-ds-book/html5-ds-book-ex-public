@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Deserialize Json</title>
+  </head>
+  <body>
+   <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/json3/3.2.4/json3.min.js"></script> -->
+   <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/json2/20121008/json2.js"></script> -->
+    <script type="text/javascript">
+     var someJSONString = '{"comment":"JSON data usually is retrieved from server","who":"you"}'
+
+     var jsonData = JSON.parse(someJSONString);
+     var evalData =  eval('(' + someJSONString + ')');
+     var transformed = JSON.parse(someJSONString, function(k, v) {
+       if (k === "") return v;
+       return v +' a?';
+     });
+
+
+     document.writeln(someJSONString.who + " access without conversion <br/>" );
+     document.writeln(jsonData.who + " with parse <br/>" );
+     document.writeln(evalData.who + " with eval <br/>");
+
+     document.writeln(transformed.who + " transformed");
+
+    </script>
+
+  </body>
+</html>

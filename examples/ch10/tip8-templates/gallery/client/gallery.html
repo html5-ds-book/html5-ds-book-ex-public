@@ -1,0 +1,52 @@
+<head>
+  <title>Cat Voter</title>
+</head>
+
+<body>
+  <div class="box">
+    {{> main}}
+  </div>
+  {{> footer}}
+</body>
+
+<template name="footer">
+  <footer>
+    {{footerText}}
+  </footer>
+</template>
+
+<template name="main">
+  {{#if hasUserEnteredName}}
+    {{> votes}}
+    {{> gallery}}
+  {{else}}
+  <label>Please insert your name
+    <input name="name">
+    </input>
+    <button class="name">start</button>
+    </label>
+  {{/if}}
+</template>
+
+<template name="votes">
+  <h3>You have <i>{{numberOfVotes}}</i> votes left</h3>
+</template>
+
+<template name="gallery">
+  <div>
+    {{#each images}}
+    <div class="item">
+      <p>
+        <b>Cat named:</b>{{name}}
+        </p>
+      <img src="{{url}}" />
+      <p>
+        Votes:
+        <progress value="{{votes}}" max="500" />
+        <output>{{votes}}</output>
+      </p>
+      <button class="vote">Vote for me</button>
+    </div>
+    {{/each}}
+  </div>
+</template>

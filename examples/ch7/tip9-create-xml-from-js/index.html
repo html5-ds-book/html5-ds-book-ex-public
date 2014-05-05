@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Create XML from JavaScript objects</title>
+    <style type="text/css">
+      textarea {
+         border: none;
+      }
+      kml {
+        display: none;
+      }
+      #second {
+        width: 400px;
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="first"> </textarea>
+    <hr/>
+    <textarea id="second"> </textarea>
+    <hr/>
+    <kml id="test" xmlns="http://www.opengis.net/kml/2.2">
+      <Document>
+        <name>Red Pyramid</name>
+        <description><!--[CDATA[]]--></description>
+        <Style id="style1">
+          <IconStyle>
+            <Icon>
+              <href></href>
+            </Icon>
+          </IconStyle>
+        </Style>
+        <Placemark>
+          <name>Red Pyramid</name>
+          <styleUrl>#style1</styleUrl>
+          <Point>
+            <coordinates>31.206320,29.808853,0.000000</coordinates>
+          </Point>
+        </Placemark>
+      </Document>
+    </kml>
+    <script type="text/javascript" src="example.js"></script>
+  </body>
+</html>

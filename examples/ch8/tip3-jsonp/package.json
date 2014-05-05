@@ -1,0 +1,8 @@
+{
+  "name" : "ch8-tip3-jsonp",
+  "description" : "simple server",
+  "dependencies" : ["restify"],
+  "author" : "Mite Mitreski",
+  "main" : "html5dasc",
+  "version" : "0.0.1"
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Using the markdown filter in Jade</title>
+</head>
+<body>
+<h2>Rendered markdown</h2>
+<div id="list">
+</div>
+<script id="template" type="text/jade">
+
+#header
+  | Hello
+#content
+  :markdown
+    # Jade-markdown hybrid
+    **Jade** simplifies the writing of HTML markup and dynamic 
+    templates. However, its not very good at simplifying the
+    writing textual content that combines headings, paragraphs 
+    and images.
+
+    This is where the **markdown** filter steps in. The filter 
+    allows you  to write text documents and easily embed 
+    [links](http://google.com) or images such as:
+
+    ![Google](https://www.google.com/images/srpr/logo3w.png)
+
+    Because filters are post-processed by Jade, we can easily 
+    add dynamic content such as the current date: 
+    #{new Date().toString()} or model #{prop} passed to the 
+    template function and have it processed by Jade.
+
+</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="https://raw.github.com/spion/markdown-js/master/lib/markdown.js"></script>
+<script type="text/javascript" src="jade.js"></script>
+<script type="text/javascript" src="example.js"></script>
+</body>
+</html>
+

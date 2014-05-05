@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <title>Rounding numbers for display</title>
+  <meta name="description" content="The HTML5 start page">
+ </head>
+ <body>
+<script type="text/javascript">
+ (function () {
+  //list of test numbers
+  var listOfNumbers=[
+    1.551,
+    1.556,
+    1.5444,
+    1.5454,
+    1.5464,
+    1.615,
+    1.616,
+    1.4,
+    1.45,
+    1.446
+  ];
+
+  function round(number, digits) {
+    if (typeof digits === "undefined" || digits < 0) {
+      digits = 0;
+    }
+    var power = Math.pow(10, digits),
+        fixed = (Math.round(number * power) / power).toString();
+
+    return fixed;
+    };
+
+
+    for (var i = 0; i < listOfNumbers.length; i++) {
+      var number = listOfNumbers[i];
+      document.write(number + "--->"
+                   + number.toFixed(2) + "--->"
+                   + number.toFixed(1) + "--->"
+                   + number.toFixed() + "<br />");
+    }
+
+    // after util
+    document.write("<p> After the util method <p>");
+    for (var i = 0; i < listOfNumbers.length; i++) {
+      var number = listOfNumbers[i];
+      document.write(number + "--->"
+                   + round(number, 2) + "--->"
+                   + round(number, 1) + "--->"
+                   + round(number) + "<br />");
+    };
+ }());
+</script>
+ </body>
+</html>

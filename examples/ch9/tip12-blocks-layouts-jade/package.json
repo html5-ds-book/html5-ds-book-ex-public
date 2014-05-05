@@ -1,0 +1,17 @@
+{
+  "name": "tip12-blocks-layouts-jade",
+  "version": "0.0.0",
+  "description": "Demonstrating blocks and layouts in Jade",
+  "main": "example.js",
+  "dependencies": {
+    "markdown": "~0.4.0",
+    "jade": "~0.28.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "author": "Gorgi Kosev",
+  "license": "None"
+}

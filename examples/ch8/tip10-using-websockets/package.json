@@ -1,0 +1,18 @@
+{
+  "name": "tip10-using-websockets",
+  "version": "0.0.0",
+  "description": "Using websockets",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": "",
+  "author": "Gorgi Kosev",
+  "license": "BSD",
+  "dependencies": {
+    "express": "~3.0.6",
+    "dnode": "~1.0.2",
+    "shoe": "0.0.7"
+  }
+}

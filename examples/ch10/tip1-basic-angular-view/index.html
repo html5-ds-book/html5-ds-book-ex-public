@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.min.js"></script>
+    <meta charset="utf8">
+  </head>
+  <body>
+    <div ng-app>
+      <label>Amount in USD:</label>
+      $<input type="text" ng-model="usdValue" placeholder="Enter USD amount">
+      <hr>
+      <label>Amount in GBP:</label><span ng-show="usdValue"> £ {{usdValue * 0.65}}</span>
+    </div>
+  </body>
+</html>

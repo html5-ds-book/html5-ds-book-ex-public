@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Displaying objects using Jade</title>
+</head>
+<body>
+<form method="post">
+    <p>Name: <input id="name" type="text" name="name" value="John"></p>
+</form>
+<div id="greeting">
+</div>
+<script id="template" type="text/jade">
+
+if hour > 18
+    span Good evening,
+else if hour < 10 
+    span 
+        | Good 
+        | morning,
+else
+    span Hello, 
+b= name
+
+</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="jade.min.js"></script>
+<script type="text/javascript" src="example.js"></script>
+</body>
+</html>
+

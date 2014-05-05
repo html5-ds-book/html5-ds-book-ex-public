@@ -1,0 +1,8 @@
+{
+  "name" : "ch8-tip9-comet",
+  "description" : "example on long pool",
+  "dependencies" : ["socket.io"],
+  "author" : "Mite Mitreski",
+  "main" : "html5dasc",
+  "version" : "0.0.1"
+}

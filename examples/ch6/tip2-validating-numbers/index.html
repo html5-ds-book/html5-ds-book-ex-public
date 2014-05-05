@@ -1,0 +1,36 @@
+<!doctype html>
+ <html lang="en">
+ <head>
+    <meta charset="utf-8">
+    <title>Numbers validation</title>
+ </head>
+ <body>
+  <form>
+    <div>
+      <label>
+        Age <input id="age" type="number" name="name" min="18" max="140" title="range 18 to 140" value="1" />
+      </label>
+    </div>
+    <div>
+      <label>
+        Bet <input id="deposit" value="1000" type="range" name="deposit" min="0" max="2000" />
+        <output id="depositDisplay">1000</output>
+      </label>
+    </div>
+    <div>
+      <label>
+        Doubles <input value="4" type="number" name="doubles" min="0" step="5" max="10" title="The value should be multiple of 5"/>
+      </label>
+    </div>
+    <div>
+      <label>
+        Awesomeness <input id="awesomeness" value="11" type="range" name="awesomeness" min="0" step="3" max="50" />
+        <output id="awesomenessDisplay">10</output>
+      </label>
+    </div>
+    <input type="submit" />
+  </form>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="example.js"> </script>
+ </body>
+</html>

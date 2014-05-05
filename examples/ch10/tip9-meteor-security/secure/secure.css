@@ -1,0 +1,10 @@
+
+/* CSS declarations go here */
+
+body {
+  width: 500px;
+}
+
+#login {
+  float: right;
+}

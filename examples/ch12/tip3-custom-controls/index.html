@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Video custom controls</title>
+    <style>
+      video {
+        box-shadow: 0 0 10px #11b;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <video id="theVideo" width="640" height="480" poster="poster.png" preload loop>
+          Video playback not supported <a href="http://archive.org/download/WalterLantz-BoogieWoogieBugleBoy1941/WalterLantz-BoogieWoogieBugleBoy1941.ogv"> download</a> instead
+        <source src="http://archive.org/download/WalterLantz-BoogieWoogieBugleBoy1941/WalterLantz-BoogieWoogieBugleBoy1941.ogv" type="video/ogg" />
+        </video>
+        <output id="speed"></output>
+    </body>
+    <p>
+    The Dashboard : <br/>
+      <button onclick="videoController.play('#theVideo')">Play</button>
+      <button onclick="videoController.pause('#theVideo')">Pause</button>
+      <button onclick="videoController.increasePlaybackRate('#theVideo',0.1)">Speed++</button>
+      <button onclick="videoController.decreasePlaybackRate('#theVideo',0.1)">Speed-- </button>
+      <button onclick="videoController.decreaseVolume('#theVideo', 0.2) ">Vol-</button>
+      <button onclick="videoController.increaseVolume('#theVideo', 0.2) ">Vol+</button>
+      <button onclick="videoController.toggleMute('#theVideo')">Toggle Mute</button>
+    <p>
+    Video is part of animation shorts on <a href="http://archive.org/details/more_animation"> archive.org</a>. The video
+    is titled : Walter Lantz - Boogie Woogie Bugle Boy
+    </p>
+    <script src="example.js"> </script>
+    <script>
+      videoController.displayRate("#theVideo","#speed");
+    </script>
+</html>

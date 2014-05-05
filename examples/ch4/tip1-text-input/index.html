@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Text input</title>
+  </head>
+  <body>
+    <form>
+      <p>
+        <label>Firstname  <input name="firstname" type="text" > </label>
+      </p>
+      <p>
+        <label>Speak up <input name="quote" type="text" x-webkit-speech speech >
+        </label>
+      </p>
+      <p>
+       <label>
+       Last name <input name="lastname" type="text" placeholder="Doe" >
+     </label>
+      </p>
+      <p>
+       <label>
+       Comment <input name="comment" type="text" title="This is area to insert your opinion" autofocus>
+     </label>
+      </p>
+      <input type="submit">
+    </form>
+    <script type="text/javascript">
+      //x-webkit-speech onwebkitspeechchange="onChange()"
+      var hasSupportForSpeach =
+              document.createElement("input").webkitSpeech != undefined;
+      console.log("has suppоrt " + hasSupportForSpeach);
+    </script>
+  </body>
+</html>

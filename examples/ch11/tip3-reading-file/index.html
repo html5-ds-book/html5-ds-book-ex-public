@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Full file API example</title>
+    </head>
+    <body>
+      <p>
+        <progress id="progress" value="0" max="100"> </progress>
+        <output id="percent" for="progress">0</output>
+      </p>
+      <p>
+        <div id="fileInfo"> </div>
+      </p>
+      <input type="file" id="file" value="Choose text file">
+      <button type="button" id="abort">Abort</button>
+      <button type="button" id="slice">Read 5 bytes</button>
+      <div id="state"></div>
+      <br />
+      <label>
+        Contents:
+        <div id="content"></div>
+      </label>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+      <script type="text/javascript" src="example.js"></script>
+    </body>
+</html>
+

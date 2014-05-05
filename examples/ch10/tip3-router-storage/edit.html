@@ -1,0 +1,11 @@
+<div class="edit">
+    <div class="left">        
+        <textarea ng-model="page.text"></textarea> 
+    </div>
+    <div class="right" 
+        ng-bind-html-unsafe="page.text | markdown">
+    </div> 
+</div>
+<a ng-click="savePage()" 
+    href="../{{page.id}}">Save</a> 
+

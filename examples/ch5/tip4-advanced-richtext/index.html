@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Simple rich text editor</title>
+        <style type="text/css">
+            #edit { margin: 0.5em 0.1em; padding:0.5em; border: solid 1px #bbb; }
+            #edit table td { border: solid 1px #ccc; }
+        </style>
+   </head>
+   <body>
+   <div>
+       <select class="btn style">
+       </select>
+       <button class="btn undo">Undo</button>
+       <button class="btn redo">Redo</button>
+       <button class="btn bold">B</button>
+       <button class="btn italic">I</button>
+       <button class="btn under">U</button>
+       <button class="btn bullet">Bullet</button>
+       <button class="btn number">Number</button>
+       <button class="btn table">Table</button>
+       <input type="file" class="btn image">Image</input>
+   </div>
+   <div id="edit" contentEditable="true">
+   </div>
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+   <script type="text/javascript" src="example.js"></script>
+   <script type="text/javascript" src="example-table.js"></script>
+   <script type="text/javascript" src="example-image.js"></script>
+   </body>
+</html>
+

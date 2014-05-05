@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'RadiolandRegular';
+  src: url('RADIOLAND-webfont.eot');
+  src: url('RADIOLAND-webfont.eot?#iefix') format('embedded-opentype'),
+    url('RADIOLAND-webfont.woff') format('woff'),
+    url('RADIOLAND-webfont.ttf') format('truetype'),
+    url('RADIOLAND-webfont.svg#RadiolandRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+div.counter {
+  font: 118px/127px 'RadiolandRegular', Arial, sans-serif;
+  letter-spacing: 0;
+  color: green;
+}
+
+.score {
+  font: 55px/60px 'RadiolandRegular', Arial, sans-serif;
+  letter-spacing: 0;
+  color: red;
+  width: 450px;
+}
+
+.period {
+  font: 35px/45px 'RadiolandRegular', Arial, sans-serif;
+  color: white;
+}
+
+div.display {
+  padding: 50px;
+}
+
+body {
+  background-color: black;
+}

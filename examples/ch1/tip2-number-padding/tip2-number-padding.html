@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+ <head>
+    <meta charset="utf-8">
+    <title>Number padding</title>
+ </head>
+  <body>
+  <script type="text/javascript">
+    (function () {
+      function iterativeSolution(number,size,character){
+        var strNumber = number.toString(),
+            len = strNumber.length,
+            prefix = '';
+
+        for (var i= size-len;i>0;i--) {
+          prefix += character;
+        }
+
+        return prefix + strNumber;
+      }
+
+      function sliceExample(number,prefix) {
+       return (prefix+number).slice(-prefix.length);
+      }
+
+      function padNumber(number,size,character) {
+        var prefix = new Array(1 + size).join(character);
+        return (prefix + number).slice(-prefix.length);
+      }
+
+      Number.prototype.pad = function(size,character) {
+        var full = new Array(1 + size).join(character);
+        return (full + this).slice(-full.length);
+      };
+
+     document.writeln(sliceExample(42,"00000"));
+     document.writeln(iterativeSolution(42,5,'0'));
+     document.writeln(iterativeSolution(42,1,'0'));
+     document.writeln(padNumber(42,5,'0'));
+     document.writeln(4.99.pad(5,"0"));
+
+    }());
+    </script>
+  </body>
+</html>

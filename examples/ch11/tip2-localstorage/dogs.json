@@ -1,0 +1,19 @@
+{
+  "dogs" : [
+  {
+    "id" : "dog1",
+    "name" : "doggy",
+    "file" : "dog1.jpg"
+  },
+  {
+    "id" : "dog2",
+    "name" : "the dog",
+    "file" : "dog2.jpg"
+  },
+  {
+    "id" : "dog3",
+    "name" : "bingo",
+    "file" : "dog3.jpg"
+  }
+  ]
+}

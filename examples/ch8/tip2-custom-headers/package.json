@@ -1,0 +1,8 @@
+{
+  "name" : "ch8-tip2-custom-headers",
+  "description" : "custom headers",
+  "dependencies" : ["restify"],
+  "author" : "Mite Mitreski",
+  "main" : "html5dasc",
+  "version" : "0.0.1"
+}

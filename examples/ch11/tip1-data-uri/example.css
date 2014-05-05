@@ -1,0 +1,9 @@
+#someImage {
+  background-image : url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" version="1.1"><path d="M 100,100 l150,0 a150,150 0 0,0 -37,-97 z" fill="green" stroke="black" stroke-width="2" stroke-linejoin="round" /> </svg>');
+ width: 300px;
+ height: 110px;
+}
+
+body {
+  background-color : #bbb;
+}

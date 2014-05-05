@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <title>Displaying formatted dates in users timezone</title>
+ </head>
+ <body>
+ <script type="text/javascript">
+   (function () {
+
+     var endOfTheWorld= new Date(1355270400000);
+
+     // various functions from the date object
+     document.writeln(endOfTheWorld);
+     document.writeln('<br/>');
+     document.writeln(endOfTheWorld.toLocaleDateString());
+
+     document.writeln('<br/>');
+     document.writeln(endOfTheWorld.toLocaleString());
+
+     document.writeln('<br/>');
+     document.writeln(endOfTheWorld.toLocaleTimeString());
+
+     document.writeln('<br/>');
+     document.writeln(-new Date().getTimezoneOffset()/60);
+     document.writeln('<br/>')
+     document.writeln(new Date().getTimezoneOffset());
+
+  }());
+  </script>
+  </body>
+</html>

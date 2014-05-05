@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Rendering an array with Handlebars</title>
+<style type="text/css">
+.message {
+    border-bottom:solid 1px #ccc;
+    width: 250px;
+    padding: 5px; }
+.message p { margin: 0.5em 0; }
+.message.unread { font-weight:bold; }    
+.message .date { 
+    float: right; 
+    font-style: italic;
+    color: #999; }
+</style>
+</head>
+<body>
+<h2>Messages</h2>
+<div id="list">
+</div>
+<script id="template" type="text/handlebars">
+
+{{#each list}} 
+    <div class="message {{status}}">
+        <p><span class="name">{{name}}</span>
+        <span class="date">{{date}}</span></p>
+        <p class="text">{{text}}</p>
+    </div>
+{{/each}}
+
+</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="handlebars.js"></script>
+<script type="text/javascript" src="example.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,31 @@
+<!doctype html>
+ <html lang="en">
+ <head>
+    <meta charset="utf-8">
+    <title>Validating text by length</title>
+ </head>
+ <body>
+  <form id="userForm">
+    <div>
+      <label>
+        Name <input id="name" type="text" name="name" maxlength="20" title="Text is limited to 20 chars" placeholder="Firstname Lastname" />
+      </label>
+    </div>
+    <div>
+      <label>
+        Initially invalid <input value="Some way to long value" maxlength="4" name="testValue" title="You should not have more than 4 characters"/>
+      </label>
+    </div>
+    <div>
+      <label>
+        Comment <textarea spellcheck="true" name="comment" placeholder="Your comment here"> </textarea>
+      </label>
+    </div>
+    <button type="submit">Save</button>
+    <button id="enable" type="button">Enable JS validation</button>
+  </form>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.10.0/jquery.validate.min.js"></script>
+  <script src="formValidate.js" ></script>
+ </body>
+</html>

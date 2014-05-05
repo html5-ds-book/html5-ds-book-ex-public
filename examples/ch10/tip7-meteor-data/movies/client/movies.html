@@ -1,0 +1,22 @@
+<body>
+  <div id="main">
+      {{> movies}}
+  </div>
+</body>
+
+<template name="movies">
+  <h3>List of favorite movies</h3>
+  <div id="lists">
+    <div>
+      <ul>
+        {{#each movies}}
+          <li><b>{{name}}</b>  {{score}}<li/>
+        {{/each}}
+      </ul>
+      <button>
+        <img src="icon.png" width="30px" height="30px" />
+      </button>
+    </div>
+  </div>
+</template>
+

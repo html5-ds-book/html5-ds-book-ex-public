@@ -1,0 +1,8 @@
+{
+  "name" : "ch8-tip8-secure",
+  "description" : "https all the way",
+  "dependencies" : ["restify"],
+  "author" : "Mite Mitreski",
+  "main" : "html5dasc",
+  "version" : "0.0.1"
+}

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+ <head>
+    <meta charset="utf-8">
+    <title>Instant preview</title>
+    <meta name="description" content="Instant preview">
+    <meta name="author" content="Mite Mitreski">
+ </head>
+  <body>
+        <div>
+          <label for='celsius'>C&deg;</label>
+          <input id='celsius' type='text' /> =
+          <label for='fahrenheit'>F&deg;</label>
+          <input id='fahrenheit' type='text' />
+        </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+          $('#celsius').keyup(function(event) {
+              var celsius = new Number(event.currentTarget.value),
+                  fahrenheit = celsius *(9/5) + 32;
+
+              $('#fahrenheit').val(fahrenheit);
+           });
+
+           $('#fahrenheit').keyup(function(event) {
+              var fahrenheit = new Number(event.currentTarget.value),
+                  celsius = (fahrenheit-32)*(5/9);
+
+              $('#celsius').val(celsius);
+           });
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Quota</title>
+  </head>
+  <body>
+    <progress id="status" value="0" max="100"></progress>
+    <div id="max">have not reached max</div>
+    <button type="button" onclick="testing.clear()" >clear</button>
+    <button type="button" onclick="testing.run(100,testing.data1k)" >100 entries 1K</button>
+    <button type="button" onclick="testing.run(500,testing.data100k)" >500 entries 100K</button>
+    <script src="example.js"></script>
+  </body>
+</html>

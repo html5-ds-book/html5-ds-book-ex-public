@@ -1,0 +1,59 @@
+{
+  "nodes": [
+    {
+      "name": "Hamlet",
+      "icon": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Bernhardt_Hamlet2.jpg/165px-Bernhardt_Hamlet2.jpg"
+    },
+    {
+      "name": "King Claudius",
+      "icon": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Massalitinov_and_Knipper_in_Hamlet_1911.jpg/167px-Massalitinov_and_Knipper_in_Hamlet_1911.jpg"
+    },
+    {
+      "name": "Hamlet ghost",
+      "icon": "http://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Henry_Fuseli_rendering_of_Hamlet_and_his_father%27s_Ghost.JPG/316px-Henry_Fuseli_rendering_of_Hamlet_and_his_father%27s_Ghost.JPG"
+    },
+    {
+      "name": "Getrude",
+      "icon": "http://upload.wikimedia.org/wikipedia/commons/6/6c/Eug%C3%A8ne_Delacroix%2C_Hamlet_and_His_Mother.JPG"
+    },
+     {
+      "name": "Ophelia",
+      "icon": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Ophelia_1894.jpg/140px-Ophelia_1894.jpg"
+    }
+  ],
+  "links": [
+    {
+      "source": 1,
+      "target": 0
+    },
+    {
+      "source": 3,
+      "target": 0
+    },
+    {
+      "source": 2,
+      "target": 0
+    },
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 4
+    },
+    {
+      "source": 0,
+      "target": 4
+    },
+    {
+      "source": 1,
+      "target": 4
+    }
+
+  ]
+}

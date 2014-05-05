@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Dropdown menu</title>
+<link rel="stylesheet" type="text/css" href="example.css">
+<style type="text/css">
+.screen-bottom {
+    position:fixed;
+    bottom:3em;
+}
+</style>
+</head>
+<body>
+
+<div class="dropdown-menu">
+    <a class="btn">Normal</a>
+    <ul class="menu">
+        <li><a href="item1">Item 1</a>
+        <li><a href="item2">Item 2</a>
+        <li class="separator"></li>
+        <li class="dropdown-menu">
+        <a href="#" class="submenu">More...</a>
+        <ul class="menu">
+            <li><a href="item3">Item 3</a>
+            <li><a href="item4">Item 4</a>
+        </ul>
+        </li>
+    </ul>
+</div>
+
+<div class="dropdown-menu">
+    <a class="btn">Right aligned</a>
+    <ul class="menu right-align">
+        <li><a href="item1">Item 1</a>
+        <li><a href="item2">Item 2</a>
+        <li class="separator"></li>
+        <li class="dropdown-menu">
+        <a href="#" class="submenu">More to the left...</a>
+        <ul class="menu left-side">
+            <li><a href="item3">Item 3</a>
+            <li><a href="item4">Item 4</a>
+        </ul>
+        </li>
+    </ul>
+</div>
+
+
+<div class="screen-bottom">
+    <div class="dropdown-menu">
+        <a class="btn">Up above</a>
+        <ul class="menu up">
+            <li><a href="item1">Item 1</a>
+            <li><a href="item2">Item 2</a>
+            <li class="separator"></li>
+            <li class="dropdown-menu">
+            <a href="#" class="submenu bottom-align">More bottom-align</a>
+            <ul class="menu bottom-align">
+                <li><a href="item3">Item 3</a>
+                <li><a href="item4">Item 4</a>
+            </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
+

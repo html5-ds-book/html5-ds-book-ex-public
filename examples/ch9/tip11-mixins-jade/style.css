@@ -1,0 +1,27 @@
+* { box-sizing: border-box; }
+.conversation { width: 70ex; }
+.message {
+    background-color:#f5f5f5;
+    padding: 5px; 
+    margin:5px 0;
+    float:left;
+    clear: both; 
+    width:100%;
+}
+.message p { 
+    margin: 0 0 0.5em 0; }
+.message .name {
+    font-weight: bold; }
+.message img { 
+    float: left; 
+    margin-right: 1em}
+.message.unread { font-weight:bold; }    
+.message .date { 
+    margin-left:1em;
+    float: right; 
+    font-style: italic;
+    color: #999; }
+.replies { 
+    margin-left:3em; 
+    clear:both; }
+

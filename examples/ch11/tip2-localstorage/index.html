@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Session and storage</title>
+    <link rel="stylesheet" type="text/css" href="example.css" />
+  </head>
+  <body>
+     <form id="dogPicker">
+      <fieldset>
+        <legend>Pick a dog</legend>
+        <div id="imageList"></div>
+        <p>The best is :</p>
+        <p>
+          <input id="dog1" type="radio" name="dog" value="dog1" />
+          <label for="dog1">small dog</label>
+
+          <input id="dog2" type="radio" name="dog" value="dog2" />
+          <label for="dog2">doggy</label>
+
+          <input id="dog3" type="radio" name="dog" value="dog3" />
+          <label for="dog3">other dog</label>
+        </p>
+      </fieldset>
+
+      <label for="comment">Leave a comment</label>
+      <textarea id="comment" name="comment" ></textarea>
+      <button id="send" type="button">Pick</button>
+    </form>
+    <p>
+      You have opened this page <output id="counter">0</output> times
+    </p>
+    <div id="selectedImage"></div>
+     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+     <script src="example.js" > </script>
+    </body>
+  </html>

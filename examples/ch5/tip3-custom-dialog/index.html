@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Simple rich text editor</title>
+        <link rel="stylesheet" type="text/css" href="dialog.css">
+        <style type="text/css">
+        .dialog.tmplExample .button-area {
+            margin-top: 20px;
+            text-align:right;
+        }
+        .dialog.tmplExample p.error.hidden {
+            display:none;        
+        }
+        .dialog.tmplExample p.error {
+            color:#c00;
+        }
+        div.secret { display:none; }
+        </style>
+   </head>
+   <body>
+   <div>
+       <div class="secret">
+           Welcome to the secret place, where only authenticated users may roam.
+       </div>
+   </div>
+   <script id="tmplExample" type="text/html">
+        <p class="error hidden"></p>
+        <p><label for="user">User:</label> 
+          <input name="user" type="text" value="<%= user %>" ></p>
+        <p><label for="pass">Pass:</label>
+          <input name="pass" type="password" value="<%= pass %>" ></p>
+        <p class="button-area">
+            <button class="login" type="button">Login</button>
+        </p>
+   </script>
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+   <script type="text/javascript" src="tmpl.js"></script>
+   <script type="text/javascript" src="dialog.js"></script>
+   <script type="text/javascript" src="example.js"></script>
+   </body>
+</html>
+

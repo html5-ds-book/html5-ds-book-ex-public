@@ -1,0 +1,65 @@
+<!doctype html>
+ <html lang="en">
+ <head>
+    <meta charset="utf-8">
+    <title>Multi select list</title>
+     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/chosen/0.9.11/chosen.css">
+    <style type="text/css">
+       .drop-down{
+        width: 300px;
+      }
+    </style>
+ </head>
+ <body>
+   <form>
+    <div>
+      <label for="cocktails">Place the order for cocktails</label>
+     <select id="cocktails" data-placeholder="Add cocktails"  multiple class="drop-down" name="cocktails">
+          <option value=""></option>
+          <option>Black Velvet</option>
+          <option>Moonwalk</option>
+          <option>Irish coffee</option>
+          <option>Giant Panda</option>
+          <option selected>Jungle Juice</option>
+          <option selected>Mojito</option>
+          <option selected disabled>Joker</option>
+          <option disabled>Long Island Iced Tea</option>
+          <option disabled>Kamikaze</option>
+     </select>
+    </div>
+
+
+   <div>
+      <label for="food">Select the food order</label>
+     <select id="food" data-placeholder="Select some off the menu element" multiple class="drop-down" name="food">
+      <optgroup label="Starters">
+            <option>White Pizza</option>
+            <option>Calzone</option>
+        <optgroup>
+       <optgroup label="Pizza">
+            <option>Chees and Tomato</option>
+            <option>Garden Veggie</option>
+            <option>Pepperoni</option>
+        <optgroup>
+        <optgroup label="Pasta">
+          <option>Seafood Scampi</option>
+          <option>Ravioli di Ricotta</option>
+        </optgroup>
+        <optgroup label="Salads">
+          <option>House Salad</option>
+          <option>Cezar Salad</option>
+          <option>Sopska</option>
+        </optgroup>
+     </select>
+    </div>
+    <input type="submit">
+    </form>
+   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+   <script src="//cdnjs.cloudflare.com/ajax/libs/chosen/0.9.11/chosen.jquery.min.js"></script>
+   <script type="text/javascript">
+   $(function() {
+      $('.drop-down').chosen();
+    });
+   </script>
+ </body>
+</html>

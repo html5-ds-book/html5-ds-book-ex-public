@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Upload binary file</title>
+<style type="text/css">
+.progress {
+    position:relative;
+    height:1em; width: 12em;
+    border: solid 1px #aaa;
+}
+.progress div {
+    position: absolute;
+    top:0; bottom:0; left:0;
+    background-color:#336699;
+}
+</style>
+</head>
+<body>
+<input type="file"   id="file" value="Choose file">
+<input type="button" id="upload" value="Upload"><br>
+<p id="info"></p>
+<div class="progress"><div id="progress"></div></div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="uploader.js"></script>
+<script type="text/javascript" src="example.js"></script>
+</body>
+</html>
+

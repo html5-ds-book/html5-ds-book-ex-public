@@ -1,0 +1,26 @@
+div.dialog {
+    position:fixed;
+    top:10%;
+    left: 50%;
+    margin-left: -320px;
+    width:640px;
+    height:auto;
+    border: solid 1px #ccc;
+    background-color:#fff;
+    box-shadow: 2px 2px 5px #ccc;
+}
+div.dialog div.title {
+    border-bottom: solid 1px #eee;
+}
+div.dialog div.title span {
+    padding: 0.5em 1em;
+    display:inline-block;
+}
+div.dialog div.title span.close {
+    float: right;
+    cursor: pointer;
+}
+div.dialog form.dialog {
+    padding: 1em;
+}
+

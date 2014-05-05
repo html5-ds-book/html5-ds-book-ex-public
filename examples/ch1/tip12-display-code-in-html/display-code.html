@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+ <head>
+    <meta charset="utf-8">
+    <title>Instant preview</title>
+    <meta name="description" content="Instant preview">
+    <meta name="author" content="Mite Mitreski">
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="prettify.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="prettify.js"></script>
+ </head>
+  <body onload="prettyPrint()">
+        <div>
+          <pre class="prettyprint">
+            <code>
+              SELECT *
+              FROM Book
+              WHERE price &lt; 100.00
+              ORDER BY name;
+            </code>
+          </pre>
+        </div>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html ng-app>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.min.js"></script>
+<script src="example.js"></script>
+<meta charset="utf8">
+</head>
+<body>
+<div ng-controller="TodoListController">
+    <ul>
+        <li ng-repeat="task in tasks" ng-show="task.shown">
+        <input type="checkbox" ng-model="task.complete">  
+        {{task.text}}
+        </li>
+    </ul>
+    <form ng-submit="addTask()">
+        <input type="text" placeholder="Write a task here..." ng-model="taskToAdd">
+        <input type="submit" value="Add">
+    </form>
+    <button ng-click="hideComplete()">Hide complete</button>
+</div>
+</body>
+</html>

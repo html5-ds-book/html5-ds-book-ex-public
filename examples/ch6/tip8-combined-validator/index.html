@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Async validation</title>
+<style type="text/css">
+[data-v-error] {
+    display:none;
+    color:red;
+}
+label {
+    width: 10em;
+    display:inline-block;
+    text-align: right;
+}
+</style>
+</head>
+<body>
+<form data-avalidate>
+    <p>
+    <label for="user">Username:</label>
+    <input name="user" 
+        required
+        data-v-minlen="6"
+        data-v-server="/api/validate/unique"
+        value="" />
+    <span data-v-error="minlen">Must be at least {minlen} characters long</span>
+    <span data-v-error="server">{username} is already in use</span>
+    </p>
+
+    <p>
+    <label for="email">Email:</label>
+    <input name="email" type="email"
+        required
+        data-v-minlen="6"
+        data-v-server="/api/validate/email"
+        value="" />
+    <span data-v-error="server">{email} is already in use</span>
+    </p>
+
+
+    <p><label for="pass">Password:</label>
+    <input name="pass" type="password"
+        required
+        data-v-minlen="8"
+        data-v-strength="3"
+        value="" />
+    <span data-v-error="minlen">Must be at least {minlen} characters long</span>
+    <span data-v-error="strength">Strength is {strength}</span>
+    </p>
+
+    <p><label for="pass2">Password (again):</label>
+    <input name="pass2" type="password"
+        required
+        data-v-equals="pass"
+        value="" />
+    <span data-v-error="equals">Must be equal to the other password</span>
+    </p> 
+
+    <input type="submit">
+
+</form>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="avalidate.js"></script>
+<script type="text/javascript" src="avalidate-plugins.js"></script>
+</body>
+</html>
+

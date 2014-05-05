@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Simple rich text editor</title>
+        <style type="text/css">
+            #edit { margin: 0.5em 0.1em; padding:0.5em; border: solid 1px #bbb; }
+        </style>
+   </head>
+   <body>
+   <div>
+       <select class="btn style">
+           <option value="P">Normal</option>
+       </select>
+       <button class="btn undo">Undo</button>
+       <button class="btn redo">Redo</button>
+       <button class="btn bold">B</button>
+       <button class="btn italic">I</button>
+       <button class="btn under">U</button>
+       <button class="btn bullet">Bullet</button>
+       <button class="btn number">Number</button>
+   </div>
+   <div id="edit" contentEditable="true">
+   </div>
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+   <script type="text/javascript" src="example.js"></script>
+   </body>
+</html>
+
